@@ -1,0 +1,5 @@
+@keyframes efect {
+0% {transform: scale(1); box-shadow: none;}
+50% {transform: scale(1.2); box-shadow: 1px 3px 6px grey;}
+100% {transform: scale(1); box-shadow: none;}
+}

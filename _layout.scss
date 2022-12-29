@@ -1,0 +1,118 @@
+.container {
+    min-width: 90rem;
+    margin: 8rem auto;
+    background-color: var(--Grey-light-1);
+    box-shadow: var(--shadow-box);
+    @media only screen and (max-width: 1200px) {margin: 0 auto;}
+}
+
+.header {
+    min-height: 8rem;
+    font-size: 1.2rem;
+    background-color: white;
+    border-bottom: 1px solid var(--Grey-light-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    @media only screen and (max-width: 944px) {flex-direction: column;}}
+
+.sidebar {
+    background-color: var(--Grey-dark-2);
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;}
+
+.hotelView {
+    display: flex; flex: 1; flex-direction: column; 
+    background-color: var(--Grey-light-1);}
+
+.overview {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    //max-width: 100vw; 
+    max-height: 10%; 
+    background-color: white;
+   }
+
+.details {
+    display: flex; 
+    padding: 4.5rem;
+    @media only screen and (max-width: 944px) {padding: 2rem;}
+    @media only screen and (max-width: 700px) {flex-direction: column;}
+}
+
+.box1 {
+    background-color: white;
+    box-shadow: 4px 4px 6px rgba(128, 128, 128, 0.473);
+    border-radius: 5px;
+    display: flex;
+    flex: 0 0 60%;
+    align-self: center;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-right: 4.5rem;
+    font-weight: 300;
+    padding: 2rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--Grey-light-3);
+    @media only screen and (max-width: 944px) {padding: 1rem; margin-right: 2.5rem;}
+    @media only screen and (max-width: 700px) {margin-right: 0; margin-bottom: 3rem;}
+
+    &__text {
+        display: flex;
+        &:not(:last-child) {padding-bottom: 2rem;}
+    }
+}
+
+.list {
+    display: flex; 
+    margin: 3rem 0;
+    padding: 3rem;
+    border-top: 1px solid var(--Grey-light-3);
+    border-bottom: 1px solid var(--Grey-light-3);
+    list-style: none;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 944px) {padding: 1rem; margin: 1rem auto;}
+    &__item {flex: 0 0 50%; margin-bottom: .6rem;}
+    &__item::before {
+    content: "";
+    //background-image: url(/chevron-right.svg); 
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+    background-size: cover;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url(/chevron-right.svg);
+    -webkit-mask-size: cover;}
+}
+.user-reviews {
+    flex: 1;
+    border-radius: 5px;
+}
+
+.booking {display: flex; flex-direction: column; padding: 4rem; 
+background-color: white;
+align-items: center; justify-content: center;
+&__text {font-size: 1.4rem; font-weight: 300; text-transform: uppercase;}
+&__btn {padding: 1rem; border-radius: 50px; border: none; width: 200px; 
+    height: 60px; font-size: 1.2rem; 
+    text-transform: uppercase; color: white;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+    cursor: pointer; overflow: hidden; justify-content: center; align-items: center;
+    transition: all 1s; margin-top: 3rem; display: flex; flex-direction: column;
+    &-text1 {margin-top: 5rem; transition: all .4s; @media only screen and (max-width: 1200px) {
+    margin-top: 4rem;}}
+    &-text2 {margin-top: 2.5rem;}}
+
+&__btn:hover {box-shadow: 4px 6px 8px rgb(128, 128, 128);
+    .booking__btn-text1 {margin-top: -4rem;}}
+&__btn:focus {animation: efect 1s infinite;}
+}
+

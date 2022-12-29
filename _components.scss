@@ -1,0 +1,199 @@
+.logo {height: 3.25rem;
+margin-left: 3rem;}
+
+.search {
+flex: 0 0 40%;
+display: flex;
+align-items: center;
+justify-content: center;
+&__input {
+font-family: inherit;
+font-size: inherit;
+color: inherit;
+border: none;
+background-color: var(--Grey-light-3);
+padding: .7rem 2rem;
+border-radius: 100px;
+width: 90%;
+transition: all .7s;
+margin-right: -6.4rem;
+&:focus {width: 100%; outline: none; background-color: var(--Grey-light-3);}
+&::-webkit-input-placeholder {color: var(--Grey-dark-1); font-weight: 500;}}
+&__btn {
+border: none;
+background-color: var(--Grey-light-3);
+cursor: pointer;
+&:focus {outline: none;}
+&:active {transform: translateY(1px);}} 
+}
+
+.user-nav {
+align-self: stretch;
+display: flex;
+flex: 0 0 20%;
+align-items: center;
+& > * {padding: 0 2rem; cursor: pointer; height: 100%;}
+& > *:hover {background-color: var(--Grey-light-1);}
+&__icon-box {display: flex; align-items: center;}
+&__notification {color: gray; font-size: .8rem; height: 1.75rem; width: 1.75rem;
+border-radius: 50%; background-color: red; color: white; text-align: center;
+line-height: 1.75rem;}
+&__user-text {padding-left: .5rem;}
+&__user {height: 100%; width: 2.25rem; display: flex; align-items: center;
+color: black; padding-right: 6rem; font-weight: 800;}
+&__user-photo {height: 3.75rem; border-radius: 50%;}
+}
+.side-nav {display: flex; flex-direction: column;
+&__item {list-style: none; padding: 2rem; position: relative; display: flex;
+    flex-direction: column; justify-content: center;cursor: pointer;
+&:not(:last-child) {margin-bottom: .5rem; @media only screen and (max-width: 944px) {margin: 0;}} 
+&:nth-of-type(1) {margin-top: .5rem; @media only screen and (max-width: 944px) {margin-top: 0;}}
+@media only screen and (max-width: 944px) {flex: 1;}}
+&__item::before {content: ""; position: absolute; left: 0; height: 100%;
+width: 3px; background-color: var(--color-primary); transition: width .5s cubic-bezier(1, 0, 0, 1), 
+background-color .1s;}
+&__link {text-decoration: none; color: var(--Grey-dark-1); font-size: 1.2rem;
+font-weight: 700; text-transform: uppercase; display: block; transition: all .6s;
+display: flex; z-index: 100; position: relative;
+@media only screen and (max-width: 944px) {justify-content: center; padding: 2rem;}}
+&__text {padding-left: 20px; }
+&__link:hover {color: whitesmoke; z-index: 2; position: relative;}
+&__item:hover::before,
+&__item--active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);}
+&__item:active::before {background-color: var(--color-primary-light);}
+@media only screen and (max-width: 944px) {
+    flex-direction: row;}
+}
+
+
+.legal {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    color: orange;
+    @media only screen and (max-width: 944px) {
+    display: none;}
+}
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+.overview__heading {font-size: 2.5rem; color: var(--Grey-dark-3); text-transform: uppercase;
+display: flex; font-weight: 200; padding: 1.5rem 3rem; letter-spacing: 1px;
+@media only screen and (max-width: 700px) {font-size: 1.8rem; padding: 1.25rem 2rem;}}
+.overview__stars {display: flex; margin-right: auto;}
+.overview__map {display: flex; color: var(--color-primary); align-items: center;
+text-align: center; font-size: 1rem; max-width: 20%; margin-left: auto;
+&-btn {min-width: 150px; cursor: pointer; border: none; border-bottom: 1px solid var(--color-primary); 
+transition: all .5s; background-color: transparent; margin-right: 20px;}
+&-btn:focus {
+    animation: efect 2s infinite;
+    outline: none;}
+&-btn:hover {color: var(--Grey-dark-3); border-bottom: none;}
+}
+
+.overview__rating {display: flex; flex-direction: column; font-size: 1.6rem; text-align: center;
+color: white; background-color: var(--color-primary); 
+align-items: center; min-height: 100%; justify-content: center; font-weight: 200; 
+text-transform: uppercase; align-self: stretch; padding: 0rem 2.25rem;
+@media only screen and (max-width: 700px) {padding: 0 1.25rem; font-size: 1.2rem;}}
+
+.recomend {display: flex; margin: 2rem 1rem; font-size: 1.2rem; font-weight: 200;
+    align-items: center; justify-content: space-between;
+    @media only screen and (max-width: 690px) {
+            flex-direction: column;
+        }
+&__p {display: flex;
+      font-weight: 200;
+      @media only screen and (max-width: 690px) {
+      margin: 2rem;}
+    }
+&__photo {
+    border-radius: 50%;
+    width: 40px;
+    //flex: 0 0 60%;
+    &:not(:last-child) {margin-right: -1.4rem;}
+    cursor: pointer;
+    outline: 3px solid white;}
+    @media only screen and (max-width: 1277px) {margin: 0;}
+
+}
+.review {display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        margin-bottom: 3rem; 
+        padding: 2rem;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.46);
+        @media only screen and (max-width: 1200px) {margin-bottom: 2rem; padding: 1rem;}
+    &__text {
+            font-size: 1rem;
+            font-weight: 200;
+        }
+        &__user {
+            display: flex;
+            align-items: center;
+            padding-top: 1rem;}
+
+        &__photo {
+        width: 30%;
+        border-radius: 50%;
+        margin-right: .5rem;
+}
+
+    &__user-box {
+        display: flex; 
+        flex-direction: column; 
+        margin-right: auto;
+        font-size: .8rem;
+        font-weight: 200;
+        color: var(--Grey-dark-3);}
+    &__user-box p:nth-last-of-type(2) {font-weight: 600; 
+        text-transform: uppercase;}
+
+    &__rating {
+        color: var(--color-primary);
+        font-size: 1.2rem;
+        font-weight: 200;}
+}
+
+.btn-inline {
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    font-size: 1rem;
+    text-transform: lowercase;
+    display: flex;
+    margin: auto;
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: all .4s;}
+
+.btn-inline-span {transition: .3s;}
+.btn-inline:focus {animation: efect 3s infinite;}
+.btn-inline:hover {.btn-inline-span {margin-left: 5px;}}
